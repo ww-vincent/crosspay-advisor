@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "pair": "GBP/USD",
+    "generated_at": "2026-05-23T17:32:03+08:00",
+    "data_range": "2024-08-14 → 2026-05-22",
+    "data_points": 451
+  },
+  "current": {
+    "rate": 1.3417,
+    "daily_change_pct": -0.0224,
+    "rsi_14": 35.1,
+    "vol_annualized_pct": 6.49,
+    "macd_hist": -0.001988
+  },
+  "signal": {
+    "direction": "ranging",
+    "confidence": 0.314,
+    "direction_score": 0.1,
+    "model_agreement": 0.5,
+    "model_details": [
+      {
+        "model": "STL",
+        "direction": "bearish",
+        "weight": 0.3,
+        "reason": "长期趋势向下，日斜率 -0.003192，年化 -0.80"
+      },
+      {
+        "model": "MA_Cross",
+        "direction": "ranging",
+        "weight": 0.3,
+        "golden_cross": false,
+        "death_cross": false,
+        "alignment": "mixed",
+        "reason": "MA5(1.34) vs MA20(1.35)，交织，Bollinger 24%位，RSI=35.1"
+      },
+      {
+        "model": "ARIMA+GARCH",
+        "direction": "bullish",
+        "weight": 0.4,
+        "reason": "1日预测 1.3418（+0.007%），7日趋势目标 1.3238"
+      }
+    ],
+    "targets": {
+      "target_1d": {
+        "rate": 1.341799,
+        "volatility": 0.00388,
+        "ci_90": {
+          "lower": 1.333235,
+          "upper": 1.350363
+        }
+      },
+      "target_3d": {
+        "rate": 1.339021,
+        "volatility": 0.00424,
+        "ci_90": {
+          "lower": 1.322811,
+          "upper": 1.35523
+        }
+      },
+      "target_7d": {
+        "rate": 1.323838,
+        "volatility": 0.004522,
+        "ci_90": {
+          "lower": 1.297433,
+          "upper": 1.350243
+        }
+      }
+    }
+  },
+  "indicators": {
+    "ma": {
+      "ma5": 1.3406,
+      "ma20": 1.3501,
+      "ma60": 1.3431
+    },
+    "bollinger": {
+      "upper": 1.3664,
+      "middle": 1.3501,
+      "lower": 1.3338
+    },
+    "atr_14": 0.0095
+  },
+  "forecast": {
+    "horizon_days": [
+      1,
+      3,
+      7
+    ],
+    "predictions": [
+      {
+        "day": 1,
+        "rate": 1.341799,
+        "volatility": 0.00388,
+        "ci_90_lower": 1.333235,
+        "ci_90_upper": 1.350363
+      },
+      {
+        "day": 3,
+        "rate": 1.339021,
+        "volatility": 0.00424,
+        "ci_90_lower": 1.322811,
+        "ci_90_upper": 1.35523
+      },
+      {
+        "day": 7,
+        "rate": 1.323838,
+        "volatility": 0.004522,
+        "ci_90_lower": 1.297433,
+        "ci_90_upper": 1.350243
+      }
+    ]
+  },
+  "risk_warnings": [
+    {
+      "level": "info",
+      "message": "多模型方向不一致，市场分歧较大，建议观望"
+    }
+  ],
+  "analysis": "GBP/USD 当前报 1.3417，日基本持平，RSI=35 偏弱，均线交织。STL、ARIMA+GARCH一致震荡，置信度偏低。7日目标区间 [1.2974, 1.3502]，90%置信水平下预计波动 1.33%。建议观望，等待方向明确。",
+  "alerts": [],
+  "suggestions": [
+    {
+      "priority": 1,
+      "icon": "↔️",
+      "title": "震荡行情，按需换汇",
+      "detail": "GBP/USD 短期震荡(置信度31%)，无明显方向。波动率6.5%，日内波幅有限。可按实际需求随时换汇，无需择时。"
+    }
+  ]
+}
