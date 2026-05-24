@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "pair": "GBP/CNY",
+    "generated_at": "2026-05-23T17:29:31+08:00",
+    "data_range": "2024-08-14 → 2026-05-22",
+    "data_points": 451
+  },
+  "current": {
+    "rate": 9.1174,
+    "daily_change_pct": -0.1194,
+    "rsi_14": 25.3,
+    "vol_annualized_pct": 4.87,
+    "macd_hist": -0.011268
+  },
+  "signal": {
+    "direction": "bearish",
+    "confidence": 0.543,
+    "direction_score": -0.3,
+    "model_agreement": 1.0,
+    "model_details": [
+      {
+        "model": "STL",
+        "direction": "bearish",
+        "weight": 0.3,
+        "reason": "长期趋势向下，日斜率 -0.019168，年化 -4.83"
+      },
+      {
+        "model": "MA_Cross",
+        "direction": "ranging",
+        "weight": 0.3,
+        "golden_cross": false,
+        "death_cross": false,
+        "alignment": "bearish_aligned",
+        "reason": "MA5(9.12) vs MA20(9.20)，空头排列，Bollinger 18%位，RSI=25.3"
+      },
+      {
+        "model": "ARIMA+GARCH",
+        "direction": "ranging",
+        "weight": 0.4,
+        "reason": "预测变动 < 5bp，接近随机游走"
+      }
+    ],
+    "targets": {
+      "target_1d": {
+        "rate": 9.117449,
+        "volatility": 0.003614,
+        "ci_90": {
+          "lower": 9.063253,
+          "upper": 9.171646
+        }
+      },
+      "target_3d": {
+        "rate": 9.101233,
+        "volatility": 0.0039,
+        "ci_90": {
+          "lower": 8.999914,
+          "upper": 9.202551
+        }
+      },
+      "target_7d": {
+        "rate": 9.010184,
+        "volatility": 0.004114,
+        "ci_90": {
+          "lower": 8.846926,
+          "upper": 9.173442
+        }
+      }
+    }
+  },
+  "indicators": {
+    "ma": {
+      "ma5": 9.118,
+      "ma20": 9.1953,
+      "ma60": 9.2003
+    },
+    "bollinger": {
+      "upper": 9.3184,
+      "middle": 9.1953,
+      "lower": 9.0722
+    },
+    "atr_14": 0.0664
+  },
+  "forecast": {
+    "horizon_days": [
+      1,
+      3,
+      7
+    ],
+    "predictions": [
+      {
+        "day": 1,
+        "rate": 9.117449,
+        "volatility": 0.003614,
+        "ci_90_lower": 9.063253,
+        "ci_90_upper": 9.171646
+      },
+      {
+        "day": 3,
+        "rate": 9.101233,
+        "volatility": 0.0039,
+        "ci_90_lower": 8.999914,
+        "ci_90_upper": 9.202551
+      },
+      {
+        "day": 7,
+        "rate": 9.010184,
+        "volatility": 0.004114,
+        "ci_90_lower": 8.846926,
+        "ci_90_upper": 9.173442
+      }
+    ]
+  },
+  "risk_warnings": [
+    {
+      "level": "warning",
+      "message": "RSI=25.3 处于超卖区域，可能出现技术反弹"
+    },
+    {
+      "level": "info",
+      "message": "三模型方向一致（全部看bearish），信号可信度较高"
+    }
+  ],
+  "analysis": "GBP/CNY 当前报 9.1174，日下跌0.12%，RSI=25 超卖，均线空头排列。STL一致看跌，置信度中等。7日目标 9.0102（-1.18%），90%置信区间 [8.8469, 9.1734]。但RSI超卖，注意短线反弹风险。",
+  "alerts": [
+    {
+      "type": "rsi",
+      "level": "warning",
+      "pair": "GBP/CNY",
+      "title": "RSI 超卖（25）",
+      "message": "RSI=25 处于超卖区域，短期反弹概率较大，可考虑逢低换汇。",
+      "triggered_at": "2026-05-23T17:29:31"
+    }
+  ],
+  "suggestions": [
+    {
+      "priority": 1,
+      "icon": "⏳",
+      "title": "即将见底，准备换汇",
+      "detail": "GBP/CNY 短期看跌，但RSI超卖(25)。7日目标9.0102（-1.18%）。建议等待RSI回升至30以上再操作，或分批换汇锁定成本。"
+    },
+    {
+      "priority": 3,
+      "icon": "📊",
+      "title": "分批换汇策略",
+      "detail": "建议分3批操作：今天换1/3（9.1174），3天后换1/3（预估9.1012），7天后换剩余1/3（预估9.0102）。平滑汇率波动风险。"
+    }
+  ]
+}

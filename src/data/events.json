@@ -1,0 +1,16 @@
+[
+  { "date": "2026-06-12", "type": "fed", "label": "美联储6月议息会议", "impact": "high" },
+  { "date": "2026-05-20", "type": "pboc", "label": "央行LPR报价", "impact": "high" },
+  { "date": "2026-05-07", "type": "fed", "label": "美联储维持利率4.25-4.50%", "impact": "high" },
+  { "date": "2026-04-21", "type": "pboc", "label": "央行降准0.5个百分点", "impact": "high" },
+  { "date": "2026-03-19", "type": "fed", "label": "美联储降息25bp至4.25%", "impact": "high" },
+  { "date": "2026-06-05", "type": "ecb", "label": "欧央行6月议息", "impact": "high" },
+  { "date": "2026-05-15", "type": "data", "label": "美国4月CPI 3.2% 低于预期", "impact": "medium" },
+  { "date": "2026-05-10", "type": "data", "label": "中国4月贸易顺差扩大", "impact": "medium" },
+  { "date": "2026-04-30", "type": "data", "label": "中国Q1 GDP增长5.2%", "impact": "high" },
+  { "date": "2026-04-15", "type": "boj", "label": "日央行维持负利率", "impact": "medium" },
+  { "date": "2026-03-28", "type": "ecb", "label": "欧央行降息25bp", "impact": "high" },
+  { "date": "2026-03-10", "type": "data", "label": "美国2月非农强于预期", "impact": "high" },
+  { "date": "2026-02-15", "type": "pboc", "label": "央行MLF操作维持利率不变", "impact": "medium" },
+  { "date": "2026-01-29", "type": "fed", "label": "美联储维持鹰派立场", "impact": "high" }
+]

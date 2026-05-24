@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "pair": "EUR/USD",
+    "generated_at": "2026-05-23T17:32:33+08:00",
+    "data_range": "2024-08-14 → 2026-05-22",
+    "data_points": 451
+  },
+  "current": {
+    "rate": 1.1595,
+    "daily_change_pct": -0.0345,
+    "rsi_14": 33.6,
+    "vol_annualized_pct": 4.54,
+    "macd_hist": -0.001855
+  },
+  "signal": {
+    "direction": "bearish",
+    "confidence": 1.0,
+    "direction_score": -0.7,
+    "model_agreement": 1.0,
+    "model_details": [
+      {
+        "model": "STL",
+        "direction": "bearish",
+        "weight": 0.3,
+        "reason": "长期趋势向下，日斜率 -0.003465，年化 -0.87"
+      },
+      {
+        "model": "MA_Cross",
+        "direction": "ranging",
+        "weight": 0.3,
+        "golden_cross": false,
+        "death_cross": false,
+        "alignment": "mixed",
+        "reason": "MA5(1.16) vs MA20(1.17)，交织，Bollinger 9%位，RSI=33.6"
+      },
+      {
+        "model": "ARIMA+GARCH",
+        "direction": "bearish",
+        "weight": 0.4,
+        "reason": "1日预测 1.1592（-0.022%），7日趋势目标 1.1401"
+      }
+    ],
+    "targets": {
+      "target_1d": {
+        "rate": 1.159245,
+        "volatility": 0.004096,
+        "ci_90": {
+          "lower": 1.151432,
+          "upper": 1.167058
+        }
+      },
+      "target_3d": {
+        "rate": 1.156475,
+        "volatility": 0.00412,
+        "ci_90": {
+          "lower": 1.142864,
+          "upper": 1.170086
+        }
+      },
+      "target_7d": {
+        "rate": 1.140069,
+        "volatility": 0.004165,
+        "ci_90": {
+          "lower": 1.11905,
+          "upper": 1.161087
+        }
+      }
+    }
+  },
+  "indicators": {
+    "ma": {
+      "ma5": 1.1612,
+      "ma20": 1.1692,
+      "ma60": 1.1652
+    },
+    "bollinger": {
+      "upper": 1.181,
+      "middle": 1.1692,
+      "lower": 1.1574
+    },
+    "atr_14": 0.0068
+  },
+  "forecast": {
+    "horizon_days": [
+      1,
+      3,
+      7
+    ],
+    "predictions": [
+      {
+        "day": 1,
+        "rate": 1.159245,
+        "volatility": 0.004096,
+        "ci_90_lower": 1.151432,
+        "ci_90_upper": 1.167058
+      },
+      {
+        "day": 3,
+        "rate": 1.156475,
+        "volatility": 0.00412,
+        "ci_90_lower": 1.142864,
+        "ci_90_upper": 1.170086
+      },
+      {
+        "day": 7,
+        "rate": 1.140069,
+        "volatility": 0.004165,
+        "ci_90_lower": 1.11905,
+        "ci_90_upper": 1.161087
+      }
+    ]
+  },
+  "risk_warnings": [
+    {
+      "level": "info",
+      "message": "三模型方向一致（全部看bearish），信号可信度较高"
+    }
+  ],
+  "analysis": "EUR/USD 当前报 1.1595，日基本持平，RSI=34 偏弱，均线交织。STL、ARIMA+GARCH一致看跌，置信度高。7日目标 1.1401（-1.68%），90%置信区间 [1.1191, 1.1611]。",
+  "alerts": [
+    {
+      "type": "breakout",
+      "level": "warning",
+      "pair": "EUR/USD",
+      "title": "触及布林下轨（1.1574）",
+      "message": "价格接近布林带下轨，短期有超卖反弹可能。",
+      "triggered_at": "2026-05-23T17:32:33"
+    }
+  ],
+  "suggestions": [
+    {
+      "priority": 1,
+      "icon": "📉",
+      "title": "人民币走强，建议3天内换汇",
+      "detail": "EUR/USD 短期看跌(置信度100%)，人民币相对走强。7日目标1.1401（-1.68%）。建议在3天内完成换汇，锁定当前汇率。"
+    },
+    {
+      "priority": 3,
+      "icon": "📊",
+      "title": "分批换汇策略",
+      "detail": "建议分3批操作：今天换1/3（1.1595），3天后换1/3（预估1.1565），7天后换剩余1/3（预估1.1401）。平滑汇率波动风险。"
+    }
+  ]
+}
